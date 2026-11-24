@@ -1,0 +1,929 @@
+[
+  {
+    "id": "icml-mas-architect",
+    "venue": "icml",
+    "year": 2026,
+    "title": "MAS-Architect: Declarative Multi-Agent System Design via Separation of Concerns",
+    "authors": [
+      "Jing Huang",
+      "Lidong Zhang",
+      "Mutian Bao",
+      "Yadong Li",
+      "Xingzhong Xu",
+      "Jinjian Zhang",
+      "Jie Liu",
+      "Ming Kong",
+      "Qiang Zhu"
+    ],
+    "format": "poster",
+    "source": "https://proceedings.mlr.press/v306/huang26by.html",
+    "topics": [
+      [
+        "机器学习",
+        "智能体",
+        "多智能体系统"
+      ],
+      [
+        "机器学习",
+        "强化学习",
+        "策略优化"
+      ]
+    ],
+    "keywords": [
+      "Auto-MAS",
+      "LLM agents",
+      "自动架构搜索",
+      "Distill-then-Explore"
+    ],
+    "notes": {
+      "motivation": "复杂推理任务经常需要多个智能体协作，手工设计协作结构难以随任务调整。",
+      "problem": "自动生成适合当前任务的智能体团队，同时控制推理成本。",
+      "analysis": "现有自动设计方案往往让通信拓扑和节点实现相互依赖，修改其中一项会牵动整个系统。",
+      "method": "以声明式代码表示系统，通过统一接口拆分拓扑规划与节点实现，再用 Distill-then-Explore 训练设计策略。",
+      "experiments": "在五个基准上的平均准确率为 78.7%，平均每次查询消耗 2,533 tokens。",
+      "contribution": "自动生成任务特定的协作架构，在所测任务上改善了准确率与计算成本的权衡。"
+    },
+    "abstractZh": "MAS-Architect 将多智能体系统的结构与节点逻辑分开建模。它针对输入任务生成协作拓扑与角色实现，并通过先蒸馏后探索优化设计。五组基准结果显示，相比对照方法，该框架能以更少的 token 获得更高的推理准确率。定性分析还发现了一些由系统自行生成的协作模式。",
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=YLP0nvtUNw"
+      },
+      {
+        "label": "PDF",
+        "url": "https://raw.githubusercontent.com/mlresearch/v306/main/assets/huang26by/huang26by.pdf"
+      }
+    ],
+    "formatSource": "https://icml.cc/virtual/2026/poster/63290"
+  },
+  {
+    "id": "icml-flexibility-trap",
+    "venue": "icml",
+    "year": 2026,
+    "title": "The Flexibility Trap: Rethinking the Value of Arbitrary Order in Diffusion Language Models",
+    "authors": [
+      "Zanlin Ni",
+      "Shenzhi Wang",
+      "Yang Yue",
+      "Tianyu Yu",
+      "Weilin Zhao",
+      "Yeguo Hua",
+      "Tianyi Chen",
+      "Jun Song",
+      "Cheng Yu",
+      "Bo Zheng",
+      "Gao Huang"
+    ],
+    "format": "oral",
+    "source": "https://proceedings.mlr.press/v306/ni26e.html",
+    "topics": [
+      [
+        "机器学习",
+        "语言模型",
+        "扩散语言模型"
+      ],
+      [
+        "机器学习",
+        "强化学习",
+        "策略优化"
+      ]
+    ],
+    "keywords": [
+      "dLLM",
+      "JustGRPO",
+      "GSM8K",
+      "并行解码"
+    ],
+    "notes": {
+      "motivation": "扩散语言模型可以改变 token 生成顺序，为推理提供了比固定自回归路径更大的搜索空间。",
+      "problem": "检验生成顺序的灵活性是否真的改善数学与代码推理。",
+      "analysis": "模型倾向于先生成容易预测的 token，将关键但不确定的决策推迟，实际覆盖的解因而更少。",
+      "method": "提出 JustGRPO，以固定的自回归顺序构建训练轨迹，并应用标准 GRPO。",
+      "experiments": "JustGRPO 在 GSM8K 上达到 89.1% 准确率，模型推理仍可采用并行解码。",
+      "contribution": "解释了任意顺序的探索偏差，并展示了一种更简单的扩散语言模型强化学习方案。"
+    },
+    "abstractZh": "论文研究扩散语言模型为什么可能从任意顺序生成中受损。作者发现，模型会利用顺序自由度绕开早期的关键不确定决策，缩小实际探索的解空间。固定训练轨迹的顺序并采用标准 GRPO，在所测任务中提升了推理表现，同时保留并行解码能力。",
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=kpgURPRMGf"
+      },
+      {
+        "label": "代码",
+        "url": "https://github.com/LeapLabTHU/JustGRPO"
+      }
+    ],
+    "formatSource": "https://icml.cc/virtual/2026/oral/71086",
+    "award": {
+      "label": "Outstanding Paper",
+      "source": "https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/"
+    }
+  },
+  {
+    "id": "cvpr-d4rt",
+    "venue": "cvpr",
+    "year": 2026,
+    "title": "Efficiently Reconstructing Dynamic Scenes One D4RT at a Time",
+    "authors": [
+      "Chuhan Zhang",
+      "Guillaume Le Moing",
+      "Skanda Koppula",
+      "Ignacio Rocco",
+      "Liliane Momeni",
+      "Junyu Xie",
+      "Shuyang Sun",
+      "Rahul Sukthankar",
+      "Joëlle K. Barral",
+      "Raia Hadsell",
+      "Zoubin Ghahramani",
+      "Andrew Zisserman",
+      "Junlin Zhang",
+      "Mehdi S. M. Sajjadi"
+    ],
+    "format": "oral",
+    "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Zhang_Efficiently_Reconstructing_Dynamic_Scenes_One_D4RT_at_a_Time_CVPR_2026_paper.html",
+    "topics": [
+      [
+        "计算机视觉",
+        "三维视觉",
+        "动态场景重建"
+      ]
+    ],
+    "keywords": [
+      "D4RT",
+      "4D reconstruction",
+      "时空对应",
+      "相机姿态"
+    ],
+    "notes": {
+      "motivation": "从视频恢复动态场景需要同时估计几何、物体运动与拍摄相机的变化。",
+      "problem": "在单一前馈架构中统一推断深度、时空对应与完整相机参数。",
+      "analysis": "逐帧密集解码计算开销大，按任务维护多套解码器会增加架构复杂度。",
+      "method": "以统一 Transformer 编码视频，解码器按需查询任意空间位置与时间点的三维坐标。",
+      "experiments": "作者在多个 4D 重建子任务上对比先前方法，报告了更好的表现和更高效的训练与推理。",
+      "contribution": "把动态重建中的多项预测统一为可独立查询的三维点估计。"
+    },
+    "abstractZh": "D4RT 根据一段视频恢复动态场景。模型用同一解码接口查询任意时空点的三维位置，由此处理深度、时空对应和相机估计。按点解码避免逐帧密集计算，论文在多项动态重建任务上验证了这一设计。",
+    "links": [
+      {
+        "label": "项目",
+        "url": "https://d4rt-paper.github.io/"
+      }
+    ],
+    "formatSource": "https://media.eventhosts.cc/Conferences/CVPR2026/CVPR_main_conf_2026_15.pdf",
+    "award": {
+      "label": "Best Paper",
+      "source": "https://cvpr.thecvf.com/Conferences/2026/News/Best_Papers"
+    }
+  },
+  {
+    "id": "iclr-multiturn",
+    "venue": "iclr",
+    "year": 2026,
+    "title": "LLMs Get Lost In Multi-Turn Conversation",
+    "authors": [
+      "Philippe Laban",
+      "Hiroaki Hayashi",
+      "Yingbo Zhou",
+      "Jennifer Neville"
+    ],
+    "format": "oral",
+    "source": "https://iclr.cc/virtual/2026/poster/10009146",
+    "topics": [
+      [
+        "机器学习",
+        "语言模型",
+        "多轮交互"
+      ],
+      [
+        "自然语言处理",
+        "模型评测",
+        "对话评测"
+      ]
+    ],
+    "keywords": [
+      "LLM",
+      "multi-turn",
+      "可靠性",
+      "需求澄清"
+    ],
+    "notes": {
+      "motivation": "用户经常通过多轮对话逐步说明任务，而常用评测往往一次性提供完整要求。",
+      "problem": "测量模型收到分步、起初不完整的指令时，解题能力和可靠性会怎样变化。",
+      "analysis": "论文观察到模型容易过早提出方案，并在获得补充信息后继续沿用先前的错误假设。",
+      "method": "把完整的指令拆成可分轮提供的信息片段，模拟交互并比较同一任务的单轮与多轮结果。",
+      "experiments": "模拟 20 万余次对话，在六项生成任务中测得多轮表现平均下降 39%。",
+      "contribution": "提供可规模化复用的多轮评测流程，并把失败定位到过早决策和后续纠偏困难。"
+    },
+    "abstractZh": "将同一任务改为多轮逐步交代后，语言模型更容易误判用户意图，且后续给出缺失条件也不一定能纠正。论文通过对照完整单轮指令与拆分的多轮指令，衡量了这种退化及其稳定性，并分析了模型依赖早期假设的行为。",
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=VKGTGGcwl6"
+      },
+      {
+        "label": "代码",
+        "url": "https://github.com/microsoft/lost_in_conversation"
+      }
+    ],
+    "formatSource": "https://iclr.cc/virtual/2026/oral/10009147",
+    "award": {
+      "label": "Outstanding Paper",
+      "source": "https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/"
+    }
+  },
+  {
+    "id": "icml-high-accuracy-sampling",
+    "venue": "icml",
+    "year": 2026,
+    "title": "High-Accuracy Sampling for Diffusion Models and Log-Concave Distributions",
+    "authors": [
+      "Fan Chen",
+      "Sinho Chewi",
+      "Constantinos Daskalakis",
+      "Alexander Rakhlin"
+    ],
+    "format": "oral",
+    "source": "https://proceedings.mlr.press/v306/chen26p.html",
+    "topics": [
+      [
+        "机器学习",
+        "生成模型",
+        "扩散模型"
+      ],
+      [
+        "机器学习",
+        "学习理论",
+        "采样复杂度"
+      ]
+    ],
+    "keywords": [
+      "FORS",
+      "log-concave",
+      "score estimation",
+      "intrinsic dimension"
+    ],
+    "notes": {
+      "motivation": "生成高精度样本可能需要多次查询扩散模型，采样成本随精度要求提高。",
+      "problem": "给出误差降低时仍高效的扩散与对数凹分布采样算法。",
+      "analysis": "先前理论界对目标误差的依赖通常较强，环境维度也可能高于数据的内在维度。",
+      "method": "构造一阶拒绝采样方法，在给定足够准确的 score 估计时用它推进扩散采样。",
+      "experiments": "理论分析给出关于误差倒数的多对数步数界，并刻画环境维度、光滑性与内在维度的影响。",
+      "contribution": "改善高精度采样的理论复杂度，并将方法推广到仅有梯度访问的一般对数凹分布。"
+    },
+    "abstractZh": "论文以一阶拒绝采样为核心，将扩散采样的误差依赖改进至多对数阶。在适用的低内在维度设定下，复杂度随内在维度变化。作者还由同一框架导出一般对数凹分布的高精度梯度采样方法。",
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=GW3umRqsZZ"
+      }
+    ],
+    "formatSource": "https://icml.cc/virtual/2026/oral/71132",
+    "award": {
+      "label": "Outstanding Paper",
+      "source": "https://blog.icml.cc/2026/07/05/announcing-the-icml-2026-awards/"
+    }
+  },
+  {
+    "id": "cvpr-pixeldit",
+    "venue": "cvpr",
+    "year": 2026,
+    "title": "PixelDiT: Pixel Diffusion Transformers for Image Generation",
+    "authors": [
+      "Yongsheng Yu",
+      "Wei Xiong",
+      "Weili Nie",
+      "Yichen Sheng",
+      "Shiqiu Liu",
+      "Jiebo Luo"
+    ],
+    "format": "oral",
+    "source": "https://openaccess.thecvf.com/content/CVPR2026/html/Yu_PixelDiT_Pixel_Diffusion_Transformers_for_Image_Generation_CVPR_2026_paper.html",
+    "topics": [
+      [
+        "计算机视觉",
+        "视觉生成",
+        "像素扩散"
+      ]
+    ],
+    "keywords": [
+      "DiT",
+      "ImageNet",
+      "GenEval",
+      "text-to-image"
+    ],
+    "notes": {
+      "motivation": "潜空间扩散依赖预训练自编码器，压缩与还原会引入重建误差。",
+      "problem": "直接在像素空间训练扩散 Transformer，同时兼顾图像全局结构和纹理。",
+      "analysis": "图像细节和全局语义需要不同粒度的建模，统一按像素处理的代价较高。",
+      "method": "采用双层 Transformer，图块级分支负责全局语义，像素级分支补足局部细节。",
+      "experiments": "ImageNet 256 和 512 上的 FID 分别为 1.61 和 1.81。文本生成图像设置还报告了 GenEval 0.74。",
+      "contribution": "实现无需自编码器的端到端像素扩散，并验证其扩展到高分辨率文本生成图像的能力。"
+    },
+    "abstractZh": "PixelDiT 在像素空间中一次性训练扩散生成模型。图块级与像素级两条路径分别表达整体结构和局部细节。论文在 ImageNet 和文本生成图像评测中检验了模型的生成质量。",
+    "links": [],
+    "formatSource": "https://media.eventhosts.cc/Conferences/CVPR2026/CVPR_main_conf_2026_15.pdf"
+  },
+  {
+    "id": "jmlr-pgda-rl",
+    "venue": "jmlr",
+    "year": 2026,
+    "title": "A Two-Timescale Primal-Dual Framework for Reinforcement Learning via Online Dual Variable Guidance",
+    "authors": [
+      "Axel F. Wolter",
+      "Tobias Sutter"
+    ],
+    "format": "journal",
+    "source": "https://jmlr.org/papers/v27/25-1016.html",
+    "topics": [
+      [
+        "机器学习",
+        "强化学习",
+        "策略优化"
+      ],
+      [
+        "机器学习",
+        "学习理论",
+        "收敛性"
+      ]
+    ],
+    "keywords": [
+      "PGDA-RL",
+      "MDP",
+      "experience replay",
+      "随机逼近"
+    ],
+    "notes": {
+      "motivation": "强化学习算法需要复用已有交互数据，同时保留随当前策略继续探索的能力。",
+      "problem": "求解正则化马尔可夫决策过程，并给出单轨迹采样下的收敛保证。",
+      "analysis": "能够访问模拟器或使用固定行为策略这样的假设，会限制部分原始对偶算法的适用场景。",
+      "method": "PGDA-RL 将投影梯度下降上升与双时间尺度分解结合，用经验回放估计梯度，依据对偶变量更新策略。",
+      "experiments": "论文证明几乎处处收敛。在更强的遍历性假设下给出末次迭代的有限时间均方误差界。",
+      "contribution": "把单条相关样本轨迹纳入原始对偶强化学习分析，并减少对采样条件的要求。"
+    },
+    "abstractZh": "PGDA-RL 用两个时间尺度更新马尔可夫决策过程的原始和对偶变量。它在单条交互轨迹中采集数据，并借助经验回放更新策略。作者给出了最优价值函数和策略的收敛结论，以及更强假设下的有限时间界。",
+    "links": []
+  },
+  {
+    "id": "osdi-mu-shell",
+    "venue": "osdi",
+    "year": 2026,
+    "title": "μShell: A Microkernel-based FPGA Shell Architecture",
+    "authors": [
+      "Jiyang Chen",
+      "Anubhav Panda",
+      "Harshavardhan Unnibhavi",
+      "Atsushi Koshiba",
+      "Pramod Bhatotia"
+    ],
+    "format": "oral",
+    "source": "https://www.usenix.org/conference/osdi26/presentation/chen-jiyang",
+    "topics": [
+      [
+        "计算机系统",
+        "硬件虚拟化",
+        "FPGA 加速"
+      ]
+    ],
+    "keywords": [
+      "microkernel",
+      "vFPGA",
+      "异构计算",
+      "硬件调度"
+    ],
+    "notes": {
+      "motivation": "云应用越来越依赖由多个可复用硬件模块组成的 FPGA 加速器。",
+      "problem": "在共享 FPGA 上灵活组合、隔离和调度模块化加速任务。",
+      "analysis": "传统 shell 静态连接模块并绑定到单个虚拟 FPGA，资源复用及动态调度因此受限。",
+      "method": "以微内核为设计原则，将可组合模块分布到独立的虚拟 FPGA，并通过专用进程间通信机制动态连接。",
+      "experiments": "作者用原型执行实际应用，对照单体式 shell，报告性能、灵活性和资源效率改善。",
+      "contribution": "把硬件加速器作为可独立调度和通信的组件，以硬件与操作系统协同设计支持模块复用。"
+    },
+    "abstractZh": "μShell 把微内核的模块化思想应用于云 FPGA。可共享的加速模块在独立的虚拟 FPGA 中运行，通过通信机制连接，调度器按组件管理执行。论文通过实际应用对比了该原型与传统静态 shell。",
+    "links": [],
+    "formatSource": "https://www.usenix.org/conference/osdi26/technical-sessions",
+    "award": {
+      "label": "Jay Lepreau Best Paper",
+      "source": "https://www.usenix.org/conferences/best-papers"
+    }
+  },
+  {
+    "id": "icse-react-rendering",
+    "venue": "icse",
+    "year": 2026,
+    "title": "Remediating Superfluous Re-Rendering in React Applications",
+    "authors": [
+      "Farideh Khalili",
+      "Satyajit Gokhale",
+      "Alexi Turcotte",
+      "Dale Xu",
+      "Frank Tip"
+    ],
+    "format": "oral",
+    "source": "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/193/Remediating-Superfluous-Re-Rendering-in-React-Applications",
+    "topics": [
+      [
+        "软件工程",
+        "程序分析",
+        "前端性能"
+      ]
+    ],
+    "keywords": [
+      "React",
+      "JSX",
+      "静态分析",
+      "重构"
+    ],
+    "notes": {
+      "motivation": "React 应用中的冗余渲染拖慢交互，而相关触发条件不易从组件代码直接判断。",
+      "problem": "识别导致冗余重渲染的反模式，为开发者提供可审查的重构建议。",
+      "analysis": "调研的 React 仓库中，92.1% 至少包含一种研究所识别的反模式。",
+      "method": "归纳五类反模式，构建静态检测分析，并为各类问题定义重写规则。",
+      "experiments": "调查 7,758 个仓库，在 23 个项目中评估重构，平均渲染次数减少 33.3%，渲染时间减少 20.54%。",
+      "contribution": "把 React 性能经验转化为检测与重构流程，并用项目实证量化运行收益。"
+    },
+    "abstractZh": "研究者归纳了五类会使 React 组件重复渲染的代码写法，提出静态分析及对应重构规则。项目评估显示，重构降低了渲染次数和时间。静态分析可能给出改变行为的建议，实验中有一个这样的案例。",
+    "links": [
+      {
+        "label": "DOI",
+        "url": "https://doi.org/10.1145/3744916.3773235"
+      }
+    ],
+    "formatSource": "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/193/Remediating-Superfluous-Re-Rendering-in-React-Applications",
+    "award": {
+      "label": "Distinguished Paper",
+      "source": "https://conf.researchr.org/info/icse-2026/awards"
+    }
+  },
+  {
+    "id": "jmlr-flagg",
+    "venue": "jmlr",
+    "year": 2026,
+    "title": "FLAGG: Flexible Autoregressive Graph Generation",
+    "authors": [
+      "Samuel Cognolato",
+      "Alessandro Sperduti",
+      "Luciano Serafini"
+    ],
+    "format": "journal",
+    "source": "https://jmlr.org/papers/v27/25-0994.html",
+    "topics": [
+      [
+        "机器学习",
+        "生成模型",
+        "图生成"
+      ]
+    ],
+    "keywords": [
+      "FLAGG",
+      "DiGress",
+      "graph generation",
+      "自回归"
+    ],
+    "notes": {
+      "motivation": "一次成图和逐步成图的方法分别擅长不同规模、不同拓扑的图。",
+      "problem": "在同一生成框架中兼顾局部子图的联合生成与大图的逐步构造。",
+      "analysis": "一次生成整张图对大图较难，完全顺序生成在较小图上也可能表现较弱。",
+      "method": "利用随机删节点过程定义生成顺序，训练插入模型逆转这个过程，逐批补全子图。",
+      "experiments": "使用 DiGress 作为一次生成模块，在不同尺寸和领域的图数据上比较采样质量。",
+      "contribution": "为既有一次成图模型提供可插拔的自回归外层，实验中同时超过两类基线。"
+    },
+    "abstractZh": "FLAGG 先学习如何逆转随机删点，再用一次生成模型生成当前需插入的一组节点与边。它可以为现有一次成图模型添加顺序生成能力。论文以 DiGress 为例，在多种图数据上比较了混合策略与各类基线。",
+    "links": [
+      {
+        "label": "代码",
+        "url": "https://github.com/CognacS/flagg-graphgen"
+      }
+    ]
+  },
+  {
+    "id": "acl-efficient-communication",
+    "venue": "acl",
+    "year": 2026,
+    "title": "Success and Cost Elicit Convention Formation for Efficient Communication",
+    "authors": [
+      "Saujas Vaduguru",
+      "Yilun Hua",
+      "Yoav Artzi",
+      "Daniel Fried"
+    ],
+    "format": "unknown",
+    "source": "https://aclanthology.org/2026.acl-long.1946/",
+    "topics": [
+      [
+        "自然语言处理",
+        "多模态交互",
+        "语言协作"
+      ]
+    ],
+    "keywords": [
+      "reference games",
+      "tangram",
+      "多模态模型",
+      "沟通约定"
+    ],
+    "notes": {
+      "motivation": "人类在重复对话中会形成共享简称，逐渐以更少的话传递相同信息。",
+      "problem": "训练多模态模型与交互伙伴形成类似约定，以缩短消息并维持指代准确性。",
+      "analysis": "仅优化成功率或仅惩罚消息成本，都不足以诱导模型形成有效的沟通约定。",
+      "method": "在模型之间模拟多轮指代游戏，并同时用任务成功和表达成本训练。",
+      "experiments": "在照片与七巧板图像的重复指代游戏中，消息长度最多减少 41%，交互过程中的成功率提高 15%。",
+      "contribution": "展示如何无需额外人工训练数据学习共享表达约定，并通过与人类互动验证效果。"
+    },
+    "abstractZh": "论文用模拟指代游戏训练多模态模型建立共享沟通约定。模型一边满足正确指代的要求，一边降低表达成本。与人类合作的重复游戏显示，训练出的模型能逐步缩短消息并提高辨认成功率。",
+    "links": [
+      {
+        "label": "PDF",
+        "url": "https://aclanthology.org/2026.acl-long.1946.pdf"
+      }
+    ]
+  },
+  {
+    "id": "osdi-neuro-symbolic-proofs",
+    "venue": "osdi",
+    "year": 2026,
+    "title": "Neuro-Symbolic Proof Generation for Scaling Systems Software Verification",
+    "authors": [
+      "Baoding He",
+      "Zenan Li",
+      "Wei Sun",
+      "Yuan Yao",
+      "Taolue Chen",
+      "Xiaoxing Ma",
+      "Zhendong Su"
+    ],
+    "format": "oral",
+    "source": "https://www.usenix.org/conference/osdi26/presentation/he-baoding",
+    "topics": [
+      [
+        "计算机系统",
+        "系统验证",
+        "交互式定理证明"
+      ],
+      [
+        "软件工程",
+        "形式化方法",
+        "证明搜索"
+      ]
+    ],
+    "keywords": [
+      "Isabelle",
+      "seL4",
+      "theorem proving",
+      "neuro-symbolic"
+    ],
+    "notes": {
+      "motivation": "交互式定理证明可以验证关键系统，但大规模手工 proof script 成本很高。",
+      "problem": "让模型与符号证明工具协作，在大型 Isabelle 工程中自动搜索证明。",
+      "analysis": "纯语言模型难以稳定生成可执行的多步证明，独立符号自动化也难覆盖所有证明义务。",
+      "method": "对证明状态做最佳优先搜索，以模型提议候选步骤，用 Isabelle 工具过滤、修复和解决子目标。",
+      "experiments": "在 FVEL seL4 及其他 Isabelle 开发上评估。seL4 基准中最多证明 77.6% 的定理。",
+      "contribution": "将证明助手的语义反馈纳入语言模型搜索，并在系统软件验证任务中展示可扩展性。"
+    },
+    "abstractZh": "该框架根据当前 Isabelle 证明状态生成候选步骤，并用符号工具检验或修复步骤、关闭能够自动求解的子目标。在 seL4 等基准上，神经与符号搜索的结合提高了多步证明的覆盖率。",
+    "links": [],
+    "formatSource": "https://www.usenix.org/conference/osdi26/technical-sessions"
+  },
+  {
+    "id": "icse-code-formatting",
+    "venue": "icse",
+    "year": 2026,
+    "title": "The Hidden Cost of Readability: How Code Formatting Silently Consumes Your LLM Budget",
+    "authors": [
+      "Dangfeng Pan",
+      "Zhensu Sun",
+      "Cenyuan Zhang",
+      "David Lo",
+      "Xiaoning Du"
+    ],
+    "format": "oral",
+    "source": "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/39/The-Hidden-Cost-of-Readability-How-Code-Formatting-Silently-Consumes-Your-LLM-Budget",
+    "topics": [
+      [
+        "软件工程",
+        "智能软件工程",
+        "代码补全"
+      ],
+      [
+        "机器学习",
+        "语言模型",
+        "推理效率"
+      ]
+    ],
+    "keywords": [
+      "code formatting",
+      "FIM",
+      "tokens",
+      "代码压缩"
+    ],
+    "notes": {
+      "motivation": "缩进和换行帮助人读代码，也计入语言模型的输入 token 和推理开销。",
+      "problem": "测量去除可逆格式在代码补全中的成本收益以及对正确性的影响。",
+      "analysis": "作者在所测场景发现，模型对部分格式信息的依赖程度较低，输入侧比输出侧更容易节省 token。",
+      "method": "对格式化和精简表示做受控比较，并实现可以双向转换的格式处理工具。",
+      "experiments": "在 Java、Python、C++、C# 的补全任务上测试 10 个模型，输入 token 平均减少 24.5%。",
+      "contribution": "量化代码格式对模型推理成本的影响，并给出可嵌入现有推理流程的优化方法。"
+    },
+    "abstractZh": "研究用四种编程语言和十个模型检验代码格式对填空式补全的影响。在论文的设置下，精简格式可以减少输入 token，补全表现整体保持稳定。作者还考察了缩短模型输出的策略，并实现了可还原格式的工具。",
+    "links": [],
+    "formatSource": "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/39/The-Hidden-Cost-of-Readability-How-Code-Formatting-Silently-Consumes-Your-LLM-Budget",
+    "award": {
+      "label": "Distinguished Paper",
+      "source": "https://conf.researchr.org/info/icse-2026/awards"
+    }
+  },
+  {
+    "id": "iclr-transformer-succinctness",
+    "venue": "iclr",
+    "year": 2026,
+    "title": "Transformers are Inherently Succinct",
+    "authors": [
+      "Pascal Bergsträßer",
+      "Ryan Cotterell",
+      "Anthony Widjaja Lin"
+    ],
+    "format": "oral",
+    "source": "https://iclr.cc/virtual/2026/poster/10008853",
+    "topics": [
+      [
+        "机器学习",
+        "学习理论",
+        "形式语言"
+      ]
+    ],
+    "keywords": [
+      "transformer",
+      "succinctness",
+      "自动机",
+      "时序逻辑"
+    ],
+    "notes": {
+      "motivation": "研究架构表达能力时，能表达哪些语言和需要多大的表示都值得考察。",
+      "problem": "比较 Transformer、有限自动机和线性时序逻辑对形式语言的表示规模。",
+      "analysis": "同一形式语言在不同表示体系中，可能需要规模相差很大的描述。",
+      "method": "以表示简洁性度量比较架构，通过构造语言族与复杂度归约分析其表达和验证能力。",
+      "experiments": "论文的主要证据是形式构造和复杂度证明，部分验证问题达到 EXPSPACE 完全。",
+      "contribution": "给出 Transformer 在表示规模上的理论优势，并揭示验证该紧凑表示所需的代价。"
+    },
+    "abstractZh": "作者从描述一个概念需要多大表示的角度分析 Transformer，证明一类形式语言用 Transformer 可以比传统自动机或时序逻辑写得更短。简洁表示也带来复杂度代价，即使某些简单的性质检查也是 EXPSPACE 完全问题。",
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=Yxz92UuPLQ"
+      }
+    ],
+    "formatSource": "https://iclr.cc/virtual/2026/oral/10020874",
+    "award": {
+      "label": "Outstanding Paper",
+      "source": "https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/"
+    }
+  },
+  {
+    "id": "iclr-polar-express",
+    "venue": "iclr",
+    "year": 2026,
+    "title": "The Polar Express: Optimal Matrix Sign Methods and their Application to the Muon Algorithm",
+    "authors": [
+      "Noah Amsel",
+      "David Persson",
+      "Christopher Musco",
+      "Robert M. Gower"
+    ],
+    "format": "oral",
+    "source": "https://iclr.cc/virtual/2026/poster/10006553",
+    "topics": [
+      [
+        "机器学习",
+        "优化方法",
+        "训练优化器"
+      ]
+    ],
+    "keywords": [
+      "Muon",
+      "polar decomposition",
+      "矩阵符号函数",
+      "bfloat16"
+    ],
+    "notes": {
+      "motivation": "Muon 训练优化器依赖矩阵极分解，深度学习应用需要适合 GPU 且吞吐较高的求解步骤。",
+      "problem": "设计可用矩阵乘实现的极分解算法，并保证有限次迭代下的近似质量。",
+      "analysis": "固定多项式迭代可能在初始几步收敛较慢，低精度计算还会带来额外数值误差。",
+      "method": "每轮求解一个极小极大问题来调整多项式更新，并处理 bfloat16 中的有限精度问题。",
+      "experiments": "将算法接入 Muon，在 FineWeb 的 10 亿到 100 亿 token 上训练 GPT-2，多个学习率下验证损失有所改善。",
+      "contribution": "同时提供最坏情况收敛保证和适合 GPU 矩阵乘的实现，验证了其在训练优化器中的作用。"
+    },
+    "abstractZh": "Polar Express 使用一系列按迭代阶段调整的多项式近似计算矩阵极分解。选择更新规则时约束最坏情况误差，以加快初期及渐近收敛。作者还针对低精度运算调整实现，并在 Muon 的语言模型训练中检验了方法。",
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=yRtgZ1K8hO"
+      },
+      {
+        "label": "代码",
+        "url": "https://github.com/NoahAmsel/PolarExpress"
+      }
+    ],
+    "formatSource": "https://iclr.cc/virtual/2026/oral/10006554",
+    "award": {
+      "label": "Honorable Mention",
+      "source": "https://blog.iclr.cc/2026/04/23/announcing-the-iclr-2026-outstanding-papers/"
+    }
+  },
+  {
+    "id": "jmlr-denoising-markov",
+    "venue": "jmlr",
+    "year": 2026,
+    "title": "A Unified Approach to Analysis and Design of Denoising Markov Models",
+    "authors": [
+      "Yinuo Ren",
+      "Grant M. Rotskoff",
+      "Lexing Ying"
+    ],
+    "format": "journal",
+    "source": "https://jmlr.org/papers/v27/25-0693.html",
+    "topics": [
+      [
+        "机器学习",
+        "生成模型",
+        "扩散模型"
+      ],
+      [
+        "机器学习",
+        "学习理论",
+        "随机过程"
+      ]
+    ],
+    "keywords": [
+      "denoising",
+      "Markov",
+      "Lévy",
+      "Doob transform"
+    ],
+    "notes": {
+      "motivation": "扩散等生成模型可以用随机过程描述，但选择不同的前向过程会改变训练和分析方式。",
+      "problem": "给出去噪 Markov 模型的统一构造条件，并推广到更多前向随机过程。",
+      "analysis": "连续扩散和离散扩散的表达形式各异，连接这些形式需要统一定义逆过程。",
+      "method": "借助广义 Doob 变换推导逆向生成元，建立变分训练目标与跨过程的 score matching 形式。",
+      "experiments": "以几何布朗运动和跳跃过程为前向动力学构造新模型，并用实例展示其适用性。",
+      "contribution": "将多个去噪模型纳入同一数学框架，并给出设计 Lévy 型去噪 Markov 模型的方法。"
+    },
+    "abstractZh": "论文统一分析从目标分布变换到简单分布、再逆向生成的 Markov 模型。作者给出构造逆向过程的条件和统一训练目标，将连续、离散扩散连接起来，并展示了用布朗运动变体及跳跃过程设计模型的实例。",
+    "links": []
+  },
+  {
+    "id": "icml-ucpo",
+    "venue": "icml",
+    "year": 2026,
+    "title": "UCPO: Uncertainty-Aware Policy Optimization",
+    "authors": [
+      "Xianzhou Zeng",
+      "Jing Huang",
+      "Chunmei Xie",
+      "Gongrui Nan",
+      "Siye Chen",
+      "Mengyu Lu",
+      "Weiqi Xiong",
+      "Qixuan Zhou",
+      "Junhao Zhang",
+      "Qiang Zhu",
+      "Yadong Li",
+      "Xingzhong Xu"
+    ],
+    "format": "poster",
+    "source": "https://proceedings.mlr.press/v306/zeng26i.html",
+    "topics": [
+      [
+        "机器学习",
+        "强化学习",
+        "策略优化"
+      ],
+      [
+        "机器学习",
+        "语言模型",
+        "置信度校准"
+      ]
+    ],
+    "keywords": [
+      "UCPO",
+      "GRPO",
+      "uncertainty",
+      "奖励设计"
+    ],
+    "notes": {
+      "motivation": "语言模型遇到超出知识范围的问题时，可能仍然给出自信的错误答案。",
+      "problem": "训练模型在有把握时回答，在合适时机表达不确定性。",
+      "analysis": "固定的不确定性奖励及联合优势归一化可能让模型倾向于过度拒答或过度猜测。",
+      "method": "分别归一化不同类型推理轨迹的优势，根据模型状态和题目难度动态调节不确定性奖励。",
+      "experiments": "在数学推理及通用任务上比较模型的作答可靠性和不确定性表达。",
+      "contribution": "定位标准策略优化中的优势偏差，并通过轨迹分组及动态奖励改善作答校准。"
+    },
+    "abstractZh": "UCPO 将确定和不确定的推理轨迹分开处理，并按训练状态及样本难度更新奖励。作者在数学和通用任务上验证该方法能降低模型自信地猜测的倾向，改善知识边界附近的可靠性。",
+    "links": [
+      {
+        "label": "OpenReview",
+        "url": "https://openreview.net/forum?id=bVCUx0gwyk"
+      },
+      {
+        "label": "代码",
+        "url": "https://github.com/xzhouzeng/ucpo"
+      }
+    ],
+    "formatSource": "https://icml.cc/virtual/2026/poster/62953"
+  },
+  {
+    "id": "icml-skill-neologisms",
+    "venue": "icml",
+    "year": 2026,
+    "title": "Skill Neologisms: Towards Skill-based Continual Learning",
+    "authors": [
+      "Antonin Berthon",
+      "Nicolás Astorga",
+      "Mihaela van der Schaar"
+    ],
+    "format": "spotlight",
+    "source": "https://proceedings.mlr.press/v306/berthon26a.html",
+    "topics": [
+      [
+        "机器学习",
+        "语言模型",
+        "持续学习"
+      ]
+    ],
+    "keywords": [
+      "skill neologisms",
+      "soft tokens",
+      "灾难性遗忘",
+      "技能组合"
+    ],
+    "notes": {
+      "motivation": "语言模型需要吸收新技能，同时保留已经掌握的能力。",
+      "problem": "在冻结原有模型权重的条件下扩充特定技能，并检验技能能否组合。",
+      "analysis": "参数微调可能造成遗忘，靠上下文示例引入技能又受有效上下文限制。作者在预训练模型中观察到了与程序性知识有关的 token。",
+      "method": "为个别技能在词表中引入可优化的软 token，将学习结果封装在新词表示中。",
+      "experiments": "评估定向技能学习、与分布外技能的组合及独立训练出的软 token 的零样本组合。",
+      "contribution": "以可组合的词表扩展实现技能增量，为持续学习提供一种轻量做法。"
+    },
+    "abstractZh": "研究用可学习的软 token 表示语言模型的新技能，训练时保留原模型权重。作者发现，新词表示能改善专门任务，还可与已有技能或独立学习的其他软 token 组合。",
+    "links": [
+      {
+        "label": "大会海报",
+        "url": "https://icml.cc/virtual/2026/poster/66243"
+      },
+      {
+        "label": "代码",
+        "url": "https://github.com/antoninbrthn/skill-neologisms"
+      }
+    ],
+    "formatSource": "https://icml.cc/virtual/2026/events/2026SpotlightPosters"
+  },
+  {
+    "id": "icse-sealign",
+    "venue": "icse",
+    "year": 2026,
+    "title": "SEAlign: Alignment Training for Software Engineering Agent",
+    "authors": [
+      "Kechi Zhang",
+      "Huangzhao Zhang",
+      "Ge Li",
+      "Jinliang You",
+      "Jia Li",
+      "Yunfei Zhao",
+      "Zhi Jin"
+    ],
+    "format": "oral",
+    "source": "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/46/SEAlign-Alignment-Training-for-Software-Engineering-Agent",
+    "topics": [
+      [
+        "软件工程",
+        "智能软件工程",
+        "软件工程智能体"
+      ],
+      [
+        "机器学习",
+        "智能体",
+        "决策训练"
+      ]
+    ],
+    "keywords": [
+      "SWE-bench",
+      "MCTS",
+      "偏好优化",
+      "代码修复"
+    ],
+    "notes": {
+      "motivation": "能解独立编程题的模型，进入需要多轮决策和工具协作的工程流程仍可能表现不佳。",
+      "problem": "让代码智能体的后训练直接改善真实软件工程工作流中的决策。",
+      "analysis": "传统代码后训练任务偏重单次答案，难提供工程多步轨迹中关键动作的训练信号。",
+      "method": "构造工程工作流步骤，用 Monte Carlo 树搜索细化多步决策，并对关键动作做偏好优化。",
+      "experiments": "在 HumanEvalFix、SWE-bench Lite 和 SWE-bench Verified 上评估，并让用户评价生成的小型应用。",
+      "contribution": "把训练重点从孤立代码生成移到工程流程中的过程决策，验证了工作流对齐的效果。"
+    },
+    "abstractZh": "SEAlign 用软件开发工作流训练代码智能体。框架搜索多步决策轨迹，再对关键行为进行偏好优化。论文用三个工程基准以及生成小型应用的人工评估检验了这一训练方法。",
+    "links": [],
+    "formatSource": "https://conf.researchr.org/details/icse-2026/icse-2026-research-track/46/SEAlign-Alignment-Training-for-Software-Engineering-Agent",
+    "award": {
+      "label": "Distinguished Paper",
+      "source": "https://conf.researchr.org/info/icse-2026/awards"
+    }
+  }
+]

@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#102f35">
+  <meta name="description" content="按会议、期刊、主题和展示形式检索 2026 年 CCF A 类论文，快速阅读结构化中文笔记。">
+  <title>论文索引 · CCF A 2026</title>
+  <link rel="icon" href="./icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="./style.css">
+  <script type="module" src="./app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#results-title">跳转到论文列表</a>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a class="brand" href="./" aria-label="返回全部论文">
+        <span class="brand-mark" data-icon="book"></span>
+        <span>论文索引 <small>PAPER INDEX</small></span>
+      </a>
+      <nav class="top-links" aria-label="页面导航">
+        <button type="button" class="top-link" id="catalog-nav" data-open-catalog><span data-icon="grid"></span>会议与期刊</button>
+        <button type="button" class="top-link" id="saved-nav" aria-pressed="false"><span data-icon="bookmark"></span>我的收藏 <span id="saved-count" hidden></span></button>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero" aria-labelledby="site-title">
+    <div class="wrap hero-inner">
+      <div class="hero-copy">
+        <p class="eyebrow"><span aria-hidden="true"></span> 2026 年度 · CCF A 类</p>
+        <h1 id="site-title">计算机论文索引</h1>
+        <p class="hero-description">按会议、期刊与研究主题浏览，阅读结构化中文笔记。</p>
+        <div class="search-box" role="search">
+          <label for="search-input" class="sr-only">检索论文</label>
+          <span class="search-icon" data-icon="search"></span>
+          <input id="search-input" type="search" placeholder="搜索论文标题、作者、主题或关键词" autocomplete="off" disabled>
+          <kbd id="search-key" aria-hidden="true">/</kbd>
+        </div>
+      </div>
+      <div class="hero-graphic" aria-hidden="true">
+        <div class="diagram-grid"></div>
+        <div class="diagram-ring ring-outer"></div><div class="diagram-ring ring-inner"></div>
+        <div class="diagram-axis"></div><div class="diagram-axis axis-vertical"></div>
+        <i class="diagram-point point-one"></i><i class="diagram-point point-two"></i><i class="diagram-point point-three"></i>
+        <div class="diagram-year">2026</div>
+      </div>
+    </div>
+  </section>
+
+  <main class="wrap workspace" id="workspace" aria-busy="true">
+    <button type="button" class="mobile-filters" id="mobile-filters" aria-controls="sidebar" aria-expanded="false"><span data-icon="sliders"></span> 会议、期刊与主题 <span class="tail" data-icon="chevron"></span></button>
+    <aside id="sidebar" class="sidebar" aria-label="索引目录" data-open="false">
+      <section class="sidebar-section">
+        <div class="sidebar-heading"><span data-icon="grid"></span><h2>会议与期刊</h2></div>
+        <div id="venue-list" class="venue-list"></div>
+        <button type="button" class="catalog-link" data-open-catalog>查看 CCF A 完整目录 <span data-icon="chevron-right"></span></button>
+      </section>
+      <section class="sidebar-section topic-section">
+        <div class="sidebar-heading"><span data-icon="layers"></span><h2>主题目录</h2></div>
+        <div id="topic-list" class="topic-list"></div>
+      </section>
+    </aside>
+
+    <section class="results" aria-labelledby="results-title">
+      <div class="results-heading">
+        <div><h2 id="results-title" tabindex="-1">全部论文</h2><p id="results-count" aria-live="polite">正在载入论文索引…</p></div>
+        <label class="sort-control"><span data-icon="sort"></span><span class="sr-only">排序方式</span>
+          <select id="sort-order" disabled>
+            <option value="relevance">相关度</option>
+            <option value="title">标题 A–Z</option>
+            <option value="author">第一作者 A–Z</option>
+            <option value="venue">会议与期刊 A–Z</option>
+          </select><span class="select-chevron" data-icon="chevron"></span>
+        </label>
+      </div>
+      <div class="filter-bar">
+        <div class="format-list" id="format-list" role="group" aria-label="展示形式"></div>
+        <button type="button" class="award-filter" id="award-filter" aria-pressed="false" disabled><span data-icon="award"></span> 获奖论文</button>
+      </div>
+      <div class="active-filters" id="active-filters" hidden></div>
+      <div id="paper-list" class="paper-list"></div>
+      <nav class="pagination" id="pagination" aria-label="论文分页" hidden></nav>
+      <noscript><p>请启用 JavaScript 以加载论文索引及检索功能。</p></noscript>
+    </section>
+  </main>
+
+  <footer class="site-footer"><div class="wrap footer-inner">
+    <span>论文索引 · 2026 年度</span>
+    <span>主题与中文笔记为本站整理 <a href="https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml" target="_blank" rel="noopener noreferrer">CCF 第七版目录 <span data-icon="external"></span></a></span>
+  </div></footer>
+
+  <dialog id="catalog-dialog" aria-labelledby="catalog-title">
+    <div class="dialog-header">
+      <div><h2 id="catalog-title">CCF A 类会议与期刊</h2><p id="catalog-count">第七版 · 2026</p></div>
+      <form method="dialog"><button class="icon-button" aria-label="关闭目录"><span data-icon="close"></span></button></form>
+    </div>
+    <div class="catalog-search"><label for="catalog-input" class="sr-only">检索会议、期刊或领域</label><span data-icon="search"></span><input id="catalog-input" type="search" placeholder="搜索会议、期刊或领域"></div>
+    <div id="catalog-list" class="catalog-list"></div>
+  </dialog>
+</body>
+</html>

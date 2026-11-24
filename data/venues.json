@@ -1,0 +1,762 @@
+[
+  {
+    "id": "ppopp",
+    "label": "PPoPP",
+    "name": "ACM SIGPLAN Symposium on Principles & Practice of Parallel Programming",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/ppopp/"
+  },
+  {
+    "id": "fast",
+    "label": "FAST",
+    "name": "USENIX Conference on File and Storage Technologies",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/fast/"
+  },
+  {
+    "id": "dac",
+    "label": "DAC",
+    "name": "Design Automation Conference",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/dac/"
+  },
+  {
+    "id": "hpca",
+    "label": "HPCA",
+    "name": "IEEE International Symposium on High Performance Computer Architecture",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/hpca/"
+  },
+  {
+    "id": "micro",
+    "label": "MICRO",
+    "name": "IEEE/ACM International Symposium on Microarchitecture",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/micro/index.html"
+  },
+  {
+    "id": "sc",
+    "label": "SC",
+    "name": "International Conference for High Performance Computing, Networking, Storage, and Analysis",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/sc/"
+  },
+  {
+    "id": "asplos",
+    "label": "ASPLOS",
+    "name": "International Conference on Architectural Support for Programming Languages and Operating Systems",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/asplos/"
+  },
+  {
+    "id": "isca",
+    "label": "ISCA",
+    "name": "International Symposium on Computer Architecture",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/isca/"
+  },
+  {
+    "id": "acm-sigops-atc",
+    "label": "ACM SIGOPS ATC",
+    "name": "ACM SIGOPS Annual Technical Conference",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/usenix/index.html"
+  },
+  {
+    "id": "eurosys",
+    "label": "EuroSys",
+    "name": "European Conference on Computer Systems",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/eurosys/"
+  },
+  {
+    "id": "hpdc",
+    "label": "HPDC",
+    "name": "The International ACM Symposium on High-Performance Parallel and Distributed Computing",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/hpdc/"
+  },
+  {
+    "id": "tocs",
+    "label": "TOCS",
+    "name": "ACM Transactions on Computer Systems",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tocs/"
+  },
+  {
+    "id": "tos",
+    "label": "TOS",
+    "name": "ACM Transactions on Storage",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tos/"
+  },
+  {
+    "id": "tcad",
+    "label": "TCAD",
+    "name": "IEEE Transactions on Computer-Aided Design of Integrated Circuits and Systems",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tcad/"
+  },
+  {
+    "id": "tc",
+    "label": "TC",
+    "name": "IEEE Transactions on Computers",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tc/index.html"
+  },
+  {
+    "id": "tpds",
+    "label": "TPDS",
+    "name": "IEEE Transactions on Parallel and Distributed Systems",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tpds/"
+  },
+  {
+    "id": "taco",
+    "label": "TACO",
+    "name": "ACM Transactions on Architecture and Code Optimization",
+    "domain": "计算机体系结构 / 并行与分布计算 / 存储系统",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/taco/"
+  },
+  {
+    "id": "sigcomm",
+    "label": "SIGCOMM",
+    "name": "ACM International Conference on Applications, Technologies, Architectures, and Protocols for Computer Communication",
+    "domain": "计算机网络",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/sigcomm/index.html"
+  },
+  {
+    "id": "mobicom",
+    "label": "MobiCom",
+    "name": "ACM International Conference on Mobile Computing and Networking",
+    "domain": "计算机网络",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/mobicom/"
+  },
+  {
+    "id": "infocom",
+    "label": "INFOCOM",
+    "name": "IEEE International Conference on Computer Communications",
+    "domain": "计算机网络",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/infocom/"
+  },
+  {
+    "id": "nsdi",
+    "label": "NSDI",
+    "name": "Symposium on Network System Design and Implementation",
+    "domain": "计算机网络",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/nsdi/"
+  },
+  {
+    "id": "jsac",
+    "label": "JSAC",
+    "name": "IEEE Journal on Selected Areas in Communications",
+    "domain": "计算机网络",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/jsac/"
+  },
+  {
+    "id": "tmc",
+    "label": "TMC",
+    "name": "IEEE Transactions on Mobile Computing",
+    "domain": "计算机网络",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tmc/"
+  },
+  {
+    "id": "ton",
+    "label": "TON",
+    "name": "IEEE Transactions on Networking（原 IEEE/ACM Transactions on Networking）",
+    "domain": "计算机网络",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/ton/"
+  },
+  {
+    "id": "ccs",
+    "label": "CCS",
+    "name": "ACM Conference on Computer and Communications Security",
+    "domain": "网络与信息安全",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/ccs/"
+  },
+  {
+    "id": "eurocrypt",
+    "label": "EUROCRYPT",
+    "name": "International Conference on the Theory and Applications of Cryptographic Techniques",
+    "domain": "网络与信息安全",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/eurocrypt/"
+  },
+  {
+    "id": "s-p",
+    "label": "S&P",
+    "name": "IEEE Symposium on Security and Privacy",
+    "domain": "网络与信息安全",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/sp/"
+  },
+  {
+    "id": "crypto",
+    "label": "CRYPTO",
+    "name": "International Cryptology Conference",
+    "domain": "网络与信息安全",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/crypto/"
+  },
+  {
+    "id": "usenix-security",
+    "label": "USENIX Security",
+    "name": "USENIX Security Symposium",
+    "domain": "网络与信息安全",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/uss/"
+  },
+  {
+    "id": "ndss",
+    "label": "NDSS",
+    "name": "Network and Distributed System Security Symposium",
+    "domain": "网络与信息安全",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/ndss/"
+  },
+  {
+    "id": "tdsc",
+    "label": "TDSC",
+    "name": "IEEE Transactions on Dependable and Secure Computing",
+    "domain": "网络与信息安全",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tdsc/"
+  },
+  {
+    "id": "tifs",
+    "label": "TIFS",
+    "name": "IEEE Transactions on Information Forensics and Security",
+    "domain": "网络与信息安全",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tifs/"
+  },
+  {
+    "id": "journal-of-cryptology",
+    "label": "Journal of Cryptology",
+    "name": "Journal of Cryptology",
+    "domain": "网络与信息安全",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/joc/"
+  },
+  {
+    "id": "pldi",
+    "label": "PLDI",
+    "name": "ACM SIGPLAN Conference on Programming Language Design and Implementation",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/pldi/"
+  },
+  {
+    "id": "popl",
+    "label": "POPL",
+    "name": "ACM SIGPLAN-SIGACT Symposium on Principles of Programming Languages",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/popl/"
+  },
+  {
+    "id": "fse",
+    "label": "FSE",
+    "name": "ACM International Conference on the Foundations of Software Engineering",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/sigsoft/"
+  },
+  {
+    "id": "sosp",
+    "label": "SOSP",
+    "name": "ACM Symposium on Operating Systems Principles",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/sosp/"
+  },
+  {
+    "id": "oopsla",
+    "label": "OOPSLA",
+    "name": "Conference on Object-Oriented Programming Systems, Languages, and Applications",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/oopsla/"
+  },
+  {
+    "id": "ase",
+    "label": "ASE",
+    "name": "International Conference on Automated Software Engineering",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/kbse/"
+  },
+  {
+    "id": "icse",
+    "label": "ICSE",
+    "name": "International Conference on Software Engineering",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/icse/"
+  },
+  {
+    "id": "issta",
+    "label": "ISSTA",
+    "name": "International Symposium on Software Testing and Analysis",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/issta/"
+  },
+  {
+    "id": "osdi",
+    "label": "OSDI",
+    "name": "USENIX Symposium on Operating Systems Design and Implementation",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/osdi/"
+  },
+  {
+    "id": "fm",
+    "label": "FM",
+    "name": "International Symposium on Formal Methods",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/fm/"
+  },
+  {
+    "id": "toplas",
+    "label": "TOPLAS",
+    "name": "ACM Transactions on Programming Languages and Systems",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/toplas/"
+  },
+  {
+    "id": "tosem",
+    "label": "TOSEM",
+    "name": "ACM Transactions on Software Engineering and Methodology",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tosem/"
+  },
+  {
+    "id": "tse",
+    "label": "TSE",
+    "name": "IEEE Transactions on Software Engineering",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tse/"
+  },
+  {
+    "id": "tsc",
+    "label": "TSC",
+    "name": "IEEE Transactions on Services Computing",
+    "domain": "软件工程 / 系统软件 / 程序设计语言",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tsc/"
+  },
+  {
+    "id": "sigmod",
+    "label": "SIGMOD",
+    "name": "ACM SIGMOD Conference",
+    "domain": "数据库 / 数据挖掘 / 内容检索",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/sigmod/"
+  },
+  {
+    "id": "sigkdd",
+    "label": "SIGKDD",
+    "name": "ACM SIGKDD Conference on Knowledge Discovery and Data Mining",
+    "domain": "数据库 / 数据挖掘 / 内容检索",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/kdd/"
+  },
+  {
+    "id": "icde",
+    "label": "ICDE",
+    "name": "IEEE International Conference on Data Engineering",
+    "domain": "数据库 / 数据挖掘 / 内容检索",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/icde/"
+  },
+  {
+    "id": "sigir",
+    "label": "SIGIR",
+    "name": "International ACM SIGIR Conference on Research and Development in Information Retrieval",
+    "domain": "数据库 / 数据挖掘 / 内容检索",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/sigir/"
+  },
+  {
+    "id": "vldb",
+    "label": "VLDB",
+    "name": "International Conference on Very Large Data Bases",
+    "domain": "数据库 / 数据挖掘 / 内容检索",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/vldb/"
+  },
+  {
+    "id": "tods",
+    "label": "TODS",
+    "name": "ACM Transactions on Database Systems",
+    "domain": "数据库 / 数据挖掘 / 内容检索",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tods/"
+  },
+  {
+    "id": "tois",
+    "label": "TOIS",
+    "name": "ACM Transactions on Information Systems",
+    "domain": "数据库 / 数据挖掘 / 内容检索",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tois/"
+  },
+  {
+    "id": "tkde",
+    "label": "TKDE",
+    "name": "IEEE Transactions on Knowledge and Data Engineering",
+    "domain": "数据库 / 数据挖掘 / 内容检索",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tkde/"
+  },
+  {
+    "id": "vldbj",
+    "label": "VLDBJ",
+    "name": "The VLDB Journal",
+    "domain": "数据库 / 数据挖掘 / 内容检索",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/vldb/"
+  },
+  {
+    "id": "stoc",
+    "label": "STOC",
+    "name": "ACM Symposium on the Theory of Computing",
+    "domain": "计算机科学理论",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/stoc/"
+  },
+  {
+    "id": "soda",
+    "label": "SODA",
+    "name": "ACM-SIAM Symposium on Discrete Algorithms",
+    "domain": "计算机科学理论",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/soda/"
+  },
+  {
+    "id": "cav",
+    "label": "CAV",
+    "name": "International Conference on Computer Aided Verification",
+    "domain": "计算机科学理论",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/cav/"
+  },
+  {
+    "id": "focs",
+    "label": "FOCS",
+    "name": "IEEE Annual Symposium on Foundations of Computer Science",
+    "domain": "计算机科学理论",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/focs/"
+  },
+  {
+    "id": "lics",
+    "label": "LICS",
+    "name": "ACM/IEEE Symposium on Logic in Computer Science",
+    "domain": "计算机科学理论",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/lics/"
+  },
+  {
+    "id": "tit",
+    "label": "TIT",
+    "name": "IEEE Transactions on Information Theory",
+    "domain": "计算机科学理论",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tit/"
+  },
+  {
+    "id": "iandc",
+    "label": "IANDC",
+    "name": "Information and Computation",
+    "domain": "计算机科学理论",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/iandc/"
+  },
+  {
+    "id": "sicomp",
+    "label": "SICOMP",
+    "name": "SIAM Journal on Computing",
+    "domain": "计算机科学理论",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/siamcomp/"
+  },
+  {
+    "id": "acm-mm",
+    "label": "ACM MM",
+    "name": "ACM International Conference on Multimedia",
+    "domain": "计算机图形学与多媒体",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/mm/"
+  },
+  {
+    "id": "siggraph",
+    "label": "SIGGRAPH",
+    "name": "ACM Special Interest Group on Computer Graphics",
+    "domain": "计算机图形学与多媒体",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/siggraph/index.html"
+  },
+  {
+    "id": "vr",
+    "label": "VR",
+    "name": "IEEE Conference on Virtual Reality and 3D User Interfaces（原 IEEE Virtual Reality）",
+    "domain": "计算机图形学与多媒体",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/vr/"
+  },
+  {
+    "id": "ieee-vis",
+    "label": "IEEE VIS",
+    "name": "IEEE Visualization Conference",
+    "domain": "计算机图形学与多媒体",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/visualization/index.html"
+  },
+  {
+    "id": "tog",
+    "label": "TOG",
+    "name": "ACM Transactions on Graphics",
+    "domain": "计算机图形学与多媒体",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tog/"
+  },
+  {
+    "id": "tip",
+    "label": "TIP",
+    "name": "IEEE Transactions on Image Processing",
+    "domain": "计算机图形学与多媒体",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tip/"
+  },
+  {
+    "id": "tvcg",
+    "label": "TVCG",
+    "name": "IEEE Transactions on Visualization and Computer Graphics",
+    "domain": "计算机图形学与多媒体",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tvcg/"
+  },
+  {
+    "id": "tmm",
+    "label": "TMM",
+    "name": "IEEE Transactions on Multimedia",
+    "domain": "计算机图形学与多媒体",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tmm/"
+  },
+  {
+    "id": "aaai",
+    "label": "AAAI",
+    "name": "AAAI Conference on Artificial Intelligence",
+    "domain": "人工智能",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/aaai/"
+  },
+  {
+    "id": "neurips",
+    "label": "NeurIPS",
+    "name": "Conference on Neural Information Processing Systems",
+    "domain": "人工智能",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/nips/"
+  },
+  {
+    "id": "acl",
+    "label": "ACL",
+    "name": "Annual Meeting of the Association for Computational Linguistics",
+    "domain": "人工智能",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/acl/"
+  },
+  {
+    "id": "cvpr",
+    "label": "CVPR",
+    "name": "IEEE/CVF Computer Vision and Pattern Recognition Conference",
+    "domain": "人工智能",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/cvpr/"
+  },
+  {
+    "id": "iccv",
+    "label": "ICCV",
+    "name": "International Conference on Computer Vision",
+    "domain": "人工智能",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/iccv/"
+  },
+  {
+    "id": "icml",
+    "label": "ICML",
+    "name": "International Conference on Machine Learning",
+    "domain": "人工智能",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/icml/"
+  },
+  {
+    "id": "iclr",
+    "label": "ICLR",
+    "name": "International Conference on Learning Representations",
+    "domain": "人工智能",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/iclr/index.html"
+  },
+  {
+    "id": "ai",
+    "label": "AI",
+    "name": "Artificial Intelligence",
+    "domain": "人工智能",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/ai/"
+  },
+  {
+    "id": "tpami",
+    "label": "TPAMI",
+    "name": "IEEE Transactions on Pattern Analysis and Machine Intelligence",
+    "domain": "人工智能",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/pami/"
+  },
+  {
+    "id": "ijcv",
+    "label": "IJCV",
+    "name": "International Journal of Computer Vision",
+    "domain": "人工智能",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/ijcv/"
+  },
+  {
+    "id": "jmlr",
+    "label": "JMLR",
+    "name": "Journal of Machine Learning Research",
+    "domain": "人工智能",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/jmlr/"
+  },
+  {
+    "id": "cscw",
+    "label": "CSCW",
+    "name": "ACM Conference On Computer-Supported Cooperative Work And Social Computing",
+    "domain": "人机交互与普适计算",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/cscw"
+  },
+  {
+    "id": "chi",
+    "label": "CHI",
+    "name": "ACM Conference on Human Factors in Computing Systems",
+    "domain": "人机交互与普适计算",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/chi"
+  },
+  {
+    "id": "ubicomp",
+    "label": "UbiComp",
+    "name": "ACM international joint conference on Pervasive and Ubiquitous Computing",
+    "domain": "人机交互与普适计算",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/huc/"
+  },
+  {
+    "id": "uist",
+    "label": "UIST",
+    "name": "ACM Symposium on User Interface Software and Technology",
+    "domain": "人机交互与普适计算",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/uist/"
+  },
+  {
+    "id": "tochi",
+    "label": "TOCHI",
+    "name": "ACM Transactions on Computer-Human Interaction",
+    "domain": "人机交互与普适计算",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/tochi/"
+  },
+  {
+    "id": "ijhcs",
+    "label": "IJHCS",
+    "name": "International Journal of Human-Computer Studies",
+    "domain": "人机交互与普适计算",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/ijmms/"
+  },
+  {
+    "id": "www",
+    "label": "WWW",
+    "name": "The Web Conference（原 International World Wide Web Conference）",
+    "domain": "交叉 / 综合 / 新兴",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/www/"
+  },
+  {
+    "id": "rtss",
+    "label": "RTSS",
+    "name": "IEEE Real-Time Systems Symposium",
+    "domain": "交叉 / 综合 / 新兴",
+    "kind": "conference",
+    "url": "https://dblp.org/db/conf/rtss/"
+  },
+  {
+    "id": "jacm",
+    "label": "JACM",
+    "name": "Journal of the ACM",
+    "domain": "交叉 / 综合 / 新兴",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/jacm/"
+  },
+  {
+    "id": "proc-ieee",
+    "label": "Proc. IEEE",
+    "name": "Proceedings of the IEEE",
+    "domain": "交叉 / 综合 / 新兴",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/pieee/"
+  },
+  {
+    "id": "scis",
+    "label": "SCIS",
+    "name": "Science China Information Sciences",
+    "domain": "交叉 / 综合 / 新兴",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/chinaf/"
+  },
+  {
+    "id": "bioinformatics",
+    "label": "Bioinformatics",
+    "name": "Bioinformatics",
+    "domain": "交叉 / 综合 / 新兴",
+    "kind": "journal",
+    "url": "https://dblp.org/db/journals/bioinformatics/"
+  }
+]
