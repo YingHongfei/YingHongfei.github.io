@@ -1,8 +1,12 @@
 import assert from 'node:assert/strict';
 import { readFile } from 'node:fs/promises';
+import { gunzipSync } from 'node:zlib';
 
 const readData = async (name) => JSON.parse(await readFile(new URL(`../data/${name}.json`, import.meta.url), 'utf8'));
-const [venues, papers] = await Promise.all([readData('venues'), readData('papers')]);
+const [venues, papers, coverage, corpusZip] = await Promise.all([
+  readData('venues'), readData('papers'), readData('coverage'), readFile(new URL('../data/corpus.json.gz', import.meta.url)),
+]);
+const corpus = JSON.parse(gunzipSync(corpusZip));
 const noteKeys = ['motivation', 'problem', 'analysis', 'method', 'experiments', 'contribution'];
 const presentationFormats = ['oral', 'spotlight', 'poster'];
 const formats = [...presentationFormats, 'journal', 'unknown'];
@@ -46,4 +50,63 @@ for (const paper of papers) {
   assert(unique(paper.topics.map((path) => path.join('/'))), `Duplicate topic path: ${paper.id}`);
 }
 
-console.log(`Validated ${papers.length} papers across ${new Set(papers.map(({ venue }) => venue)).size} sources and ${venues.length} CCF A venues.`);
+assert(corpus.schema === 1, 'Unexpected database schema');
+assert(corpus.authors.every(text), 'An imported author is empty');
+for (const path of corpus.topics) {
+  assert(path.length >= 2 && path.every((part) => text(part) && !part.includes('/')), 'Invalid imported topic path');
+}
+
+const importedFormats = ['unknown', 'poster', 'spotlight', 'oral', 'journal'];
+const topicMethods = ['unclassified', 'title', 'program'];
+const titleKey = (value) => value.normalize('NFKD').toLowerCase().replace(/[^\p{L}\p{N}]+/gu, '');
+const importedIds = new Set(papers.map(({ id }) => id));
+const titles = new Set(papers.map(({ venue, title }) => `${venue}/${titleKey(title)}`));
+const doi = new Set();
+const distribution = {};
+const topicStats = {};
+const increment = (counts, key) => { counts[key] = (counts[key] || 0) + 1; };
+for (const paper of papers) increment(distribution, paper.format);
+const byVenue = Object.fromEntries(venues.map(({ id }) => [id, 0]));
+for (const paper of papers) byVenue[paper.venue]++;
+
+for (const row of corpus.rows) {
+  assert(Array.isArray(row) && row.length === 9, 'Invalid row shape');
+  const [id, venue, title, authorIds, format, topicIds, url, method, details] = row;
+  assert(slug(id) && !importedIds.has(id), `Duplicate or invalid imported ID ${id}`);
+  importedIds.add(id);
+  assert(catalog.has(venue) && text(title) && https(url), `Invalid imported bibliographic fields ${id}`);
+  const key = `${venue}/${titleKey(title)}`;
+  assert(!titles.has(key), `Duplicate imported title ${id}`);
+  titles.add(key);
+  assert(authorIds.length > 0 && authorIds.every((index) => Number.isInteger(index) && text(corpus.authors[index])), `Invalid authors ${id}`);
+  assert(topicIds.length > 0 && topicIds.every((index) => Number.isInteger(index) && corpus.topics[index]), `Invalid topics ${id}`);
+  assert(importedFormats[format] && topicMethods[method], `Invalid labels ${id}`);
+  assert((format === 4) === (catalog.get(venue).kind === 'journal'), `Invalid journal classification ${id}`);
+  assert(text(details.publicationSource), `Missing source provenance ${id}`);
+  assert(!details.formatSource || https(details.formatSource), `Invalid presentation source ${id}`);
+  assert(!details.programSource || https(details.programSource), `Invalid program link ${id}`);
+  assert(!details.dblp || /^[^\s?#]+$/.test(details.dblp), `Invalid DBLP key ${id}`);
+  assert(!details.review || https(details.review), `Invalid external review link ${id}`);
+  if (details.award) assert(text(details.award[0]) && https(details.award[1]), `Invalid award source ${id}`);
+  const aliases = details.alsoVenues || [];
+  assert(unique([venue, ...aliases]), `Duplicate venue association ${id}`);
+  for (const alias of aliases) assert(catalog.has(alias), `Unknown secondary venue ${id}`);
+  for (const source of [venue, ...aliases]) byVenue[source]++;
+  const doiMatch = url.match(/^https:\/\/doi\.org\/(.+)$/i);
+  if (doiMatch) {
+    const key = doiMatch[1].toLowerCase();
+    assert(!doi.has(key), `Duplicate DOI ${key}`);
+    doi.add(key);
+  }
+  increment(distribution, importedFormats[format]);
+  increment(topicStats, topicMethods[method]);
+}
+
+assert.equal(coverage.total, importedIds.size, 'Wrong collection total');
+assert.equal(coverage.year, 2026, 'Wrong collection year');
+assert.equal(coverage.notes, papers.length, 'Wrong number of reading notes');
+assert.equal(coverage.coveredVenues, Object.values(byVenue).filter(Boolean).length, 'Wrong venue coverage');
+assert.deepEqual(coverage.venueCounts, byVenue, 'Venue totals do not match');
+assert.deepEqual(coverage.formats, distribution, 'Format totals do not match');
+assert.deepEqual(coverage.topicMethods, topicStats, 'Topic counts do not match');
+console.log(`Validated ${coverage.total} records, ${coverage.notes} reading notes and ${coverage.coveredVenues}/${venues.length} CCF A venues.`);

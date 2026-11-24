@@ -7,8 +7,8 @@
   <meta name="description" content="按会议、期刊、主题和展示形式检索 2026 年 CCF A 类论文，快速阅读结构化中文笔记。">
   <title>论文索引 · CCF A 2026</title>
   <link rel="icon" href="./icon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="./style.css">
-  <script type="module" src="./app.js"></script>
+  <link rel="stylesheet" href="./style.css?v=20261124-corpus">
+  <script type="module" src="./app.js?v=20261124-corpus"></script>
 </head>
 <body>
   <a class="skip" href="#results-title">跳转到论文列表</a>
@@ -30,7 +30,7 @@
       <div class="hero-copy">
         <p class="eyebrow"><span aria-hidden="true"></span> 2026 年度 · CCF A 类</p>
         <h1 id="site-title">计算机论文索引</h1>
-        <p class="hero-description">按会议、期刊与研究主题浏览，阅读结构化中文笔记。</p>
+        <p class="hero-description" id="coverage-line">按会议、期刊与研究主题检索 2026 年正式发表论文。</p>
         <div class="search-box" role="search">
           <label for="search-input" class="sr-only">检索论文</label>
           <span class="search-icon" data-icon="search"></span>
@@ -76,7 +76,10 @@
       </div>
       <div class="filter-bar">
         <div class="format-list" id="format-list" role="group" aria-label="展示形式"></div>
-        <button type="button" class="award-filter" id="award-filter" aria-pressed="false" disabled><span data-icon="award"></span> 获奖论文</button>
+        <div class="extra-filters" role="group" aria-label="论文附加筛选">
+          <button type="button" class="award-filter" id="award-filter" aria-pressed="false" disabled><span data-icon="award"></span> 获奖论文</button>
+          <button type="button" class="award-filter" id="notes-filter" aria-pressed="false" disabled><span data-icon="book"></span> 有中文笔记</button>
+        </div>
       </div>
       <div class="active-filters" id="active-filters" hidden></div>
       <div id="paper-list" class="paper-list"></div>
@@ -87,7 +90,7 @@
 
   <footer class="site-footer"><div class="wrap footer-inner">
     <span>论文索引 · 2026 年度</span>
-    <span>主题与中文笔记为本站整理 <a href="https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml" target="_blank" rel="noopener noreferrer">CCF 第七版目录 <span data-icon="external"></span></a></span>
+    <span>书目来源与收录口径 <a href="https://github.com/YingHongfei/YingHongfei.github.io#数据覆盖" target="_blank" rel="noopener noreferrer">数据说明 <span data-icon="external"></span></a> <a href="https://www.ccf.org.cn/Academic_Evaluation/By_category/2026-03-31/870181.shtml" target="_blank" rel="noopener noreferrer">CCF 第七版目录 <span data-icon="external"></span></a></span>
   </div></footer>
 
   <dialog id="catalog-dialog" aria-labelledby="catalog-title">
